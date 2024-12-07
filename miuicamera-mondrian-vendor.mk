@@ -5,10 +5,18 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/miuicamera-mondrian
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/miuicamera-mondrian/proprietary/system/permissions/privapp-permissions-miuigallery.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuigallery.xml \
+    vendor/xiaomi/miuicamera-mondrian/proprietary/system/permissions/privapp-permissions-miuivideoplayer.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuivideoplayer.xml
 
 PRODUCT_PACKAGES += \
     libcamera_algoup_jni.xiaomi \
     libcamera_mianode_jni.xiaomi \
     libmicampostproc_client \
     vendor.xiaomi.hardware.campostproc@1.0-system \
-    MiuiCamera
+    MiuiCamera \
+    MiuiGallery \
+    MiuiGalleryEditor \
+    MiuiVideoPlayer
+
